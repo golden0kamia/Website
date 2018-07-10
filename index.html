@@ -1,0 +1,65 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+<title>Bastien Piguet</title>
+</head>
+
+<body>
+<h1>Bastien Piguet @golden0kamia</h1>
+<hr />
+<h2>Cloud :</h2>
+<p><a href="/owncloud" target="_blank" rel="noopener">Lien direct</a></p>
+<p>via <a href="http://cloud.blacksteelstudio.ch">Blacksteel</a></p>
+<h2>BlackSteelStudio</h2>
+<p><a href="http://www.blacksteelstudio.ch">Page Principale</a></p>
+<p><a href="http://wiki.blacksteelstudio.ch">Wiki</a></p>
+
+<FORM METHOD="POST" ENCTYPE="application/x-www-form-urlencoded">
+<P>
+<TABLE BORDER="1" CELLPADDING="4" CELLSPACING="1" WIDTH="60%">
+	<TR>
+		<TD WIDTH="22%" VALIGN="TOP" BGCOLOR="#99CCFF">
+			<P ALIGN="CENTER"><FONT SIZE="4" COLOR="white" FACE="Arial, Helvetica">Calculator</FONT>
+
+<P ALIGN="CENTER"><FONT SIZE="4" FACE="Comic Sans MS">&nbsp;</FONT><FONT SIZE="5" FACE="Arial, Helvetica"> Antenna Calculator</FONT></P>
+			<P><SCRIPT language="JavaScript">
+
+function antcalc(form) {
+   if (form.frequency.value) {       
+     frequency = form.frequency.value;
+     form.half_centimeter.value = (300/frequency/0.04);
+   } else if (form.half_centimeter.value) {
+     centimeter = form.half_centimeter.value;
+     form.frequency.value = (300/(centimeter*0.04));
+   }
+}
+function reset_form(form) {
+     form.frequency.value = "";
+     form.half_centimeter.value = "";
+}
+
+</SCRIPT><BR>
+			<FONT SIZE="5">Calculate the frequency/length of antennas&nbsp;</FONT>&nbsp; <BR>
+			Please Enter one value only and CALCULATE the result.&nbsp; <br>
+			<P>Clear the form to make new entries.&nbsp;</P>
+			<P>
+
+			<TABLE BORDER="0">
+				<TR>
+					<TD>Frequency in Mhz. :</TD>
+					<TD><INPUT TYPE="TEXT" NAME="frequency" SIZE="10"></TD>
+				</TR>
+				<TR>
+					<TD>Quarter Wavelength in centimeter:</TD>
+					<TD><INPUT TYPE="TEXT" NAME="half_centimeter" SIZE="15"></TD>
+				</TR>
+			</TABLE>
+</P>
+
+			<P><input type="button" value="CALCULATE" onclick="antcalc(this.form)"><input
+        type="button" value="Clear the Form" onclick="reset_form(this.form)">
+		</TD>
+	</TR>
+</TABLE>
+</body>
+</html>
