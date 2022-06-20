@@ -1,6 +1,11 @@
 @font-face {
     font-family: "RocknRollOne-Regular";
-    src: url("RocknRollOne-Regular.ttf");
+    src: url("../asset/RocknRollOne-Regular.ttf");
+}
+
+h1
+{
+    font-size: 130%;
 }
 
 body{
@@ -29,6 +34,8 @@ img
     width: 100%;
     margin: auto;
     display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .myLink:hover
@@ -44,11 +51,10 @@ img
 
 a
 {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+    color:cadetblue;
 }
 
 footer
 {
-    font-size: 1ex;
+    font-size: 0.2em;
 }
