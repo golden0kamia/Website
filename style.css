@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "RocknRollOne-Regular";
+    src: url("RocknRollOne-Regular.ttf");
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-size: 7vmin;
+    font-family: "RocknRollOne-Regular";
+    text-align: center;
+}
+
+img
+{
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+.myLink
+{
+    border-color: rgb(80, 80, 80);
+    border-width: 1px;
+    border-style: solid;
+    border-radius:0.5em;
+    text-align: left;
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+}
+
+.myLink:hover
+{
+    background-color: rgb(32, 32, 32);
+}
+
+.myLink:active
+{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+a
+{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer
+{
+    font-size: 1ex;
+}
