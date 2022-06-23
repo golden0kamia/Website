@@ -3,58 +3,92 @@
     src: url("../asset/RocknRollOne-Regular.ttf");
 }
 
-h1
-{
-    font-size: 130%;
-}
-
-body{
+html {
     background-color: rgb(20, 20, 20);
     color: white;
-    font-size: 7vmin;
     font-family: "RocknRollOne-Regular";
+}
+
+body {
+    font-size: 7vmin;
     text-align: center;
 }
 
-img
-{
+h1 {
+    font-size: 130%;
+}
+
+img {
     width: 0.9em;
     height: 0.9em;
     margin-left: 0.3em;
-    margin-right: 0.3em;
+    margin-right: 0.2em;
 }
 
-.myLink
-{
+.link {
     border-color: rgb(80, 80, 80);
     border-width: 1px;
     border-style: solid;
-    border-radius:0.5em;
+    border-radius: 0.5em;
     text-align: left;
     width: 100%;
-    margin: auto;
     display: inline-block;
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
+    transition: 0.4s;
 }
 
-.myLink:hover
-{
+.link:hover {
     background-color: rgb(32, 32, 32);
 }
 
-.myLink:active
-{
-    background-color: rgb(255, 255, 255);
+.link:active {
+    background-color: white;
     color: black;
 }
 
-a
-{
-    color:cadetblue;
+.section {
+    color: white;
+    font-size: 50%;
+
+}
+
+.info {
+    border-color: rgb(80, 80, 80);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.5em;
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.infoBlock {
+    display: inline-block;
+}
+
+.infoTitle {
+    color: white;
+    font-size: 40%;
+}
+
+.infoValue {
+    color: white;
+    font-size: 60%;
+}
+
+a {
+    color: cadetblue;
 }
 
 footer
 {
-    font-size: 0.2em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    font-size: 40%;
 }
