@@ -36,6 +36,7 @@ img {
     color: white;
     text-decoration: none;
     transition: 0.4s;
+    margin: 0.1em
 }
 
 .link:hover {
