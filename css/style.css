@@ -10,12 +10,13 @@ html {
 }
 
 body {
-    font-size: 7vmin;
+    font-size: 6vmin;
     text-align: center;
 }
 
 h1 {
     font-size: 130%;
+    margin-bottom: 0em;
 }
 
 img {
