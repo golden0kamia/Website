@@ -13,15 +13,22 @@
 <!-- Corps de la page -->
 
 <body>
+    <script src="script.js"></script>
     <div>
         <h1>Choose your way</h1>
     </div>
-    <div style="margin: auto; width: 8em;">
+    <button id="webButton" class="sectionButton" style="color:rgb(20, 20, 20); background-color: white" onclick="showOnly(1)">
+        Website
+    </button>
+    <button id="servButton" class="sectionButton" onclick="showOnly(2)">
+        Services
+    </button>
+    <div style="margin: auto; width: 8em;", id="website">
         <div>
             <a class="section">
                 Website
             </a>
-            <a class="link" href="https://cloud.piguetb.ch" title="Service de fichiers cloud">
+            <a class="link" href="http://cloud.piguetb.ch" title="Service de fichiers cloud">
                 <img src="asset/nextcloud_icon.png" />
                 Cloud
             </a>
@@ -67,6 +74,15 @@
                 OpenHab
             </a>
         </div>
+    </div>
+
+    <div id="services" style="display: none;">
+        <a class="section">
+            My services
+        </a>
+        <p>
+            Wow such empty
+        </p>
     </div>
 
     <!--  Pieds de page -->
