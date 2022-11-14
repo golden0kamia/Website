@@ -9,25 +9,25 @@
     <title>Bastien Piguet</title>
     <link rel="icon" type="image/x-icon" href="asset/server-icon.png">
 </head>
+<script src="js/script.js" ></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
 <!-- Corps de la page -->
 
 <body>
-    <script src="script.js"></script>
-    <div>
         <h1>Choose your way</h1>
+    <div>
+        <button id="webButton" style="color:rgb(20, 20, 20); background-color: white" onclick="showOnly(1)">
+            Website
+        </button>
+        <button id="servButton" onclick="showOnly(2)">
+            Services
+        </button>
     </div>
-    <button id="webButton" class="sectionButton" style="color:rgb(20, 20, 20); background-color: white" onclick="showOnly(1)">
-        Website
-    </button>
-    <button id="servButton" class="sectionButton" onclick="showOnly(2)">
-        Services
-    </button>
-    <div style="margin: auto; width: 8em;", id="website">
+
+    <div style="margin: auto; width: 8em; display: none;", id="website">
         <div>
-            <a class="section">
-                Website
-            </a>
+            <h2>Website</h2>
             <a class="link" href="http://cloud.piguetb.ch" target="_blank" title="Service de fichiers cloud">
                 <img src="asset/nextcloud_icon.png" />
                 Cloud
@@ -46,14 +46,12 @@
             </a>
         </div>
         <div>
-            <a class="section">
-                Games server
-            </a>
+            <h2>Games server</h2>
             <a class="link" href="http://heia.mc.piguetb.ch" target="_blank" >
                 <img src="asset/minecraft_icon.webp" />
                 <div class="infoBlock">
                     <div class="infoTitle">
-                        Minecraft HEFR
+                        Minecraft HEIA
                     </div>
                     <div class="infoValue">
                         heia.mc.piguetb.ch
@@ -61,10 +59,8 @@
                 </div>
             </a>
         </div>
-        <div style="display: none;">
-            <a class="section">
-                Private services
-            </a>
+        <div id="privateLink" style="display: none;">
+            <h2>Private services</h2>
             <a class="link" href="http://tautulli.piguetb.ch"  title="Service de statistique de visonnage">
                 <img src="asset/tautulli_icon.svg" />
                 Tautulli
@@ -74,24 +70,39 @@
                 OpenHab
             </a>
         </div>
+        <button id="hiddenButton" onclick="showMore()">
+            More
+        </button>
     </div>
 
-    <div id="services" style="display: none;">
-        <a class="section">
+    <div id="services" style="display: block;">
+        <h2>
             My services
-        </a>
-        <p>
-            Wow such empty
-        </p>
+        </h2>
+        <div class="serviceBlock">
+            <img class="serviceIcon" id="heiaIcon">
+            <div style="display:inline-block">
+                <div class="serviceTitle">
+                    Minecraft HEIA
+                </div>
+                <div class="serviceInfo" id="heiaMotd" style="margin-right: 1em;">
+                    MOTD
+                </div>
+                <div class="serviceInfo" id="heiaPlayer">
+                    2/20
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--  Pieds de page -->
 
-    <footer>
-        <div>
-            Contact: <a href="mailto:bastien@1625maules.ch">Email</a>, Bastien Piguet, @golden0kamia
-        </div>
-    </footer>
 </body>
+
+<footer>
+    <div>
+        Contact: <a href="mailto:bastien@1625maules.ch">Email</a>, Bastien Piguet, @golden0kamia
+    </div>
+</footer>
 
 </html>

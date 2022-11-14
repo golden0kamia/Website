@@ -19,11 +19,55 @@ h1 {
     margin-bottom: 0em;
 }
 
+h2 {
+    color: white;
+    font-size: 50%;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    font-size: 40%;
+    background-color: rgb(20, 20, 20);
+}
+
 img {
     width: 0.9em;
     height: 0.9em;
     margin-left: 0.3em;
     margin-right: 0.2em;
+    display: inline-block;
+}
+
+a {
+    color: cadetblue;
+}
+
+button{
+    font-family: "RocknRollOne-Regular";
+    font-size: 50%;
+    border-color: rgb(80, 80, 80);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.5em;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(32, 32, 32);
+}
+
+button:active {
+    background-color: white;
+    color: black;
 }
 
 .link {
@@ -39,22 +83,12 @@ img {
     transition: 0.4s;
     margin: 0.1em;
 }
-
 .link:hover {
     background-color: rgb(32, 32, 32);
 }
-
 .link:active {
     background-color: white;
     color: black;
-}
-
-.section {
-    color: white;
-    font-size: 50%;
-    margin-left: 1em;
-    margin-right: 1em;
-
 }
 
 .info {
@@ -80,38 +114,27 @@ img {
     font-size: 60%;
 }
 
-a {
-    color: cadetblue;
+.serviceIcon {
+    height: 1.4em;
+    width: auto;
 }
 
-.sectionButton{
-    font-family: "RocknRollOne-Regular";
-    font-size: 50%;
+.serviceBlock {
     border-color: rgb(80, 80, 80);
     border-width: 1px;
     border-style: solid;
     border-radius: 0.5em;
-    color: white;
-    background-color: rgb(20, 20, 20);
-    transition: 0.4s;
-    cursor: pointer;
+    width: auto;
+    text-align: center;
+    display: inline-block;
 }
-
-.sectionButton:hover {
-    background-color: rgb(32, 32, 32);
-}
-
-.sectionButton:active {
-    background-color: white;
-    color: black;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 50%;
-    margin-left: -50%;
+ .serviceTitle {
     font-size: 40%;
-    background-color: rgb(20, 20, 20);
-}
+    text-align: left;
+ }
+
+ .serviceInfo {
+    display: inline-block;
+    font-size: 80%;
+    margin-right: 0.3em;
+ }
