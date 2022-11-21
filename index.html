@@ -9,13 +9,14 @@
     <title>Bastien Piguet</title>
     <link rel="icon" type="image/x-icon" href="asset/server-icon.png">
 </head>
+
 <script src="js/script.js" ></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
 
 <!-- Corps de la page -->
 
 <body>
-        <h1>Choose your way</h1>
+    <h1>Choose your way</h1>
     <div>
         <button id="webButton" style="color:rgb(20, 20, 20); background-color: white" onclick="showOnly(1)">
             Website
@@ -34,6 +35,7 @@
             </a>
             <a class="link" href="http://plex.piguetb.ch" target="_blank" title="Service de visonnage de films en streaming">
                 <img src="asset/plex_icon.png" />
+                <!--<img src="http://plex.piguetb.ch/favicon.ico" />-->
                 Plex
             </a>
             <a class="link" href="http://filmerie.piguetb.ch" target="_blank" title="Service de visonnage de films en streaming">
@@ -42,6 +44,7 @@
             </a>
             <a class="link" href="http://film.piguetb.ch" target="_blank" title="Service d'ajout et de report de films">
                 <img src="asset/overseerr_icon.svg" />
+                <!--<img src="http://film.piguetb.ch/favicon.ico" />-->
                 Overseerr
             </a>
         </div>
@@ -76,9 +79,8 @@
     </div>
 
     <div id="services" style="display: none;">
-        <h2>
-            My services
-        </h2>
+        <h2>My services</h2>
+
         <div class="serviceBlock">
             <img class="serviceIcon" id="heiaIcon">
             <div style="display:inline-block">
@@ -88,8 +90,19 @@
                 <div class="serviceInfo" id="heiaMotd" style="margin-right: 1em;">
                     MOTD
                 </div>
-                <div class="serviceInfo" id="heiaPlayer">
-                    2/20
+                <div class="serviceInfo" id="heiaPlayer" title="Player list">
+                    0/20
+                </div>
+            </div>
+        </div>
+
+        <div class="serviceBlock" style="display: none;">
+            <div style="display:inline-block;">
+                <div class="serviceTitle">
+                    CPU temp
+                </div>
+                <div style="width: max-content; background-color: white"></div>
+                    <div style="width: 20%; background-color: green; height: 20px;"></div>
                 </div>
             </div>
         </div>

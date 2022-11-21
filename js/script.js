@@ -16,20 +16,36 @@ function showOnly(n){
         case 2:
             webSlide.style.display = "none";
             servSlide.style.display = "block";
+            servButton.className = '.btn.actif';
             servButton.style.color="rgb(20, 20, 20)";
             servButton.style.backgroundColor="white";
             webButton.style.color="white";
             webButton.style.backgroundColor="rgb(20, 20, 20)";
 
-            let myinfo = document.getElementById("heiaPlayer");
-            myinfo.innerText = "Loading";
-            fetch("https://api.mcsrvstat.us/2/heia.mc.piguetb.ch").then(res => {return res.json()}).then(json =>{
-                let myinfo = document.getElementById("heiaPlayer");
-                let mytext = document.getElementById("heiaMotd");
-                let myIcon = document.getElementById("heiaIcon");
-                myIcon.src = json.icon;
-                mytext.innerHTML = json.motd.html;
-                myinfo.innerText = json.players.online + "/" + json.players.max;
+            let myinfo = document.getElementById("heiaMotd");
+            if(myinfo.innerText == "MOTD"){
+                myinfo.innerText = "Loading";
+                fetch("https://api.mcsrvstat.us/2/heia.mc.piguetb.ch").then(res => {
+                    //console.log(res.json());
+                    return res.json();
+                }).then(json =>{
+                    let myinfo = document.getElementById("heiaPlayer");
+                    let mytext = document.getElementById("heiaMotd");
+                    let myIcon = document.getElementById("heiaIcon");
+                    myIcon.src = json.icon;
+                    mytext.innerHTML = json.motd.html;
+                    //console.log(json.motd)
+                    myinfo.innerText = json.players.online + "/" + json.players.max;
+                    //console.log(json.players.list);
+                    myinfo.title = json.players.list;
+                });
+            }
+
+            fetch("sensors.json").then(res => {
+                //console.log(res.json());
+                return res.json();
+            }).then(json => {
+                let coreTemp = json['coretemp-isa-0000']['Package id 0']['temp1_input'];
             });
             break;
         default:
