@@ -88,7 +88,7 @@
                     Minecraft HEIA
                 </div>
                 <div class="serviceInfo" id="heiaMotd" style="margin-right: 1em;">
-                    MOTD
+                    MOT
                 </div>
                 <div class="serviceInfo" id="heiaPlayer" title="Player list">
                     0/20
@@ -96,13 +96,15 @@
             </div>
         </div>
 
-        <div class="serviceBlock" style="display: none;">
-            <div style="display:inline-block;">
-                <div class="serviceTitle">
+        <div class="serviceBlock">
+            <div style="width: 5em;">
+                <div class="serviceTitle", style="margin-left: 5%;">
                     CPU temp
                 </div>
-                <div style="width: max-content; background-color: white"></div>
-                    <div style="width: 20%; background-color: green; height: 20px;"></div>
+                <div id="TempDisplay">20°C</div>
+                    <div style="width: 90%; margin: 5%; background-color: white; border-radius: 0.2em;">
+                        <div id="fillBar" style="width: 20%; height: 0.7em; background-color: green; border-radius: 0.2em;"></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ function showOnly(n){
     const servButton = document.getElementById("servButton");
     switch(n){
         case 1:
-            webSlide.style.display = "block";
+            webSlide.style.display = "";
             servSlide.style.display = "none";
             webButton.style.color="rgb(20, 20, 20)";
             webButton.style.backgroundColor="white";
@@ -15,7 +15,7 @@ function showOnly(n){
             break;
         case 2:
             webSlide.style.display = "none";
-            servSlide.style.display = "block";
+            servSlide.style.display = "";
             servButton.className = '.btn.actif';
             servButton.style.color="rgb(20, 20, 20)";
             servButton.style.backgroundColor="white";
@@ -45,7 +45,26 @@ function showOnly(n){
                 //console.log(res.json());
                 return res.json();
             }).then(json => {
+                let tempDisplay = document.getElementById("TempDisplay");
+                let fillBar = document.getElementById("fillBar")
                 let coreTemp = json['coretemp-isa-0000']['Package id 0']['temp1_input'];
+                tempDisplay.innerHTML = coreTemp+"°C";
+                let tempPercent = ((coreTemp-20)*100)/70;
+                if(coreTemp < 20){
+                    tempPercent = 100-(coreTemp*100)/20;
+                    fillBar.style.backgroundColor = "aqua";
+                    fillBar.style.marginLeft = (100-tempPercent)+'%';
+                }
+                else if(coreTemp < 60){
+                    fillBar.style.backgroundColor = "green";
+                }
+                else if (coreTemp < 80){
+                    fillBar.style.backgroundColor = "orange";
+                }
+                else{
+                    fillBar.style.backgroundColor = "red";
+                }
+                fillBar.style.width = tempPercent + '%';
             });
             break;
         default:
