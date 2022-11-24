@@ -4,10 +4,12 @@
 }
 
 html {
-    background-color: rgb(20, 20, 20);
-    color: white;
+    background-color: white;
+    color: black;
     font-family: "RocknRollOne-Regular";
+    border-width: 2px;
 }
+
 
 a {
     color: cadetblue;
@@ -23,38 +25,93 @@ button{
     font-family: "RocknRollOne-Regular";
     font-size: 50%;
     border-color: rgb(80, 80, 80);
-    border-width: 1px;
     border-style: solid;
     border-radius: 0.5em;
-    color: white;
-    background-color: rgb(20, 20, 20);
+    color: black;
+    background-color: white;
     transition: 0.4s;
     cursor: pointer;
 }
 button:hover {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(158, 158, 158);
 }
 button:active{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
+}
+button.select{
+    background-color: black;
+    color: white;
 }
 
 .link {
     border-color: rgb(80, 80, 80);
-    border-width: 1px;
     border-style: solid;
     border-radius: 0.5em;
     text-align: left;
-    color: white;
+    color: black;
     text-decoration: none;
     transition: 0.4s;
     margin: 0.1em;
     display: block;
 }
 .link:hover {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(210, 210, 210);
 }
 .link:active {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    font-size: 40%;
     background-color: white;
-    color: black;
+}
+
+@media (prefers-color-scheme: dark){
+    html {
+        background-color: rgb(20, 20, 20);
+        color: white;
+    }
+    a {
+        color: cadetblue;
+    }
+    
+    button{
+        border-color: rgb(80, 80, 80);
+        color: white;
+        background-color: rgb(20, 20, 20);
+    }
+    button:hover {
+        background-color: rgb(39, 39, 39);
+    }
+    button:active{
+        background-color: white;
+        color: black;
+    }
+    button.select{
+        background-color: white;
+        color: black;
+    }
+    
+    .link {
+        border-color: rgb(80, 80, 80);
+        color: white;
+    }
+    .link:hover {
+        background-color: rgb(39, 39, 39);
+    }
+    .link:active {
+        background-color: white;
+        color: black;
+    }
+
+    footer {
+        background-color: rgb(20, 20, 20);
+    }
 }

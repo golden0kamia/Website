@@ -9,18 +9,16 @@
     <link rel="stylesheet" href="css/indexStyle.css" />
     <title>Bastien Piguet</title>
     <link rel="icon" type="image/x-icon" href="asset/server-icon.png">
+    <script src="js/script.js" ></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
 </head>
-
-<script src="js/script.js" ></script>
-<script type="module" src="https://md-block.verou.me/md-block.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
 
 <!-- Corps de la page -->
 
 <body>
     <h1>Choose your way</h1>
     <div>
-        <button id="webButton" style="color:rgb(20, 20, 20); background-color: white" onclick="showOnly(1)">
+        <button id="webButton" class="select" onclick="showOnly(1)">
             Website
         </button>
         <button id="servButton" onclick="showOnly(2)">
@@ -31,7 +29,7 @@
         </button>
     </div>
 
-    <div id="website" class="list" style="width: 8em; margin:auto">
+    <div id="website" class="list" style="width: 8em;">
         <div>
             <h2>Website</h2>
             <a class="link" href="http://cloud.piguetb.ch" target="_blank" title="Service de fichiers cloud">
@@ -80,12 +78,16 @@
         <div id="privateLink" style="display: none;">
             <h2>Private services</h2>
             <a class="link" href="http://tautulli.piguetb.ch"  title="Service de statistique de visonnage">
-                <img src="asset/tautulli_icon.svg" />
-                Tautulli
+                <div class="inner">
+                    <img src="asset/tautulli_icon.svg" />
+                    Tautulli
+                </div>
             </a>
             <a class="link" href="http://hab.piguetb.ch" title="Service de statistique de visonnage">
-                <img src="asset/openhab_icon.png" />
-                OpenHab
+                <div class="inner">
+                    <img src="asset/openhab_icon.png" />
+                    OpenHab
+                </div>
             </a>
         </div>
         <button id="hiddenButton" onclick="showMore()">
@@ -93,7 +95,7 @@
         </button>
     </div>
 
-    <div id="services" class="list" style="display: none;">
+    <div id="services" class="list" style="display: none; width: 15.5em;">
         <h2>My services</h2>
 
         <div class="serviceBlock">
@@ -103,10 +105,10 @@
                     <div class="serviceTitle">
                         Minecraft HEIA
                     </div>
-                    <div class="serviceInfo" id="heiaMotd" style="margin-right: 1em;">
+                    <div class="serviceInfo" id="heiaMotd" style="margin-right: 1em; display: inline-block;">
                         MOTD
                     </div>
-                    <div class="serviceInfo" id="heiaPlayer" title="Player list">
+                    <div class="serviceInfo" id="heiaPlayer" title="Player list" style=" display: inline-block;">
                         0/20
                     </div>
                 </div>
@@ -119,7 +121,7 @@
                     CPU temp
                 </div>
                 <div id="TempDisplay">20°C</div>
-                    <div style="width: 90%; margin: 5%; background-color: white; border-radius: 0.2em;">
+                    <div style="width: 90%; margin: 5%; background-color: white; border-radius: 0.2em; border-style: solid;">
                         <div id="fillBar" style="width: 20%; height: 0.7em; background-color: green; border-radius: 0.2em;"></div>
                     </div>
                 </div>
@@ -127,11 +129,13 @@
         </div>
     </div>
 
-    <div id="documents" class="list" style="display: none;">
+    <div id="documents" class="list" style="display: none; width: 3.5em;">
         <div>
             <h2>Markdown</h2>
             <a class="link" href="documents.html">
-                Cours
+                <div class="inner">
+                    Cours
+                </div>
             </a>
         </div>
     </div>

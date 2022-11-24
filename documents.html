@@ -7,37 +7,46 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/baseStyle.css" />
     <link rel="stylesheet" href="css/docStyle.css"/>
-    <link rel="stylesheet" href="css/prism.css"/>
+    <link rel="stylesheet" href="css/prismLight.css"/>
+    <link rel="stylesheet" href="css/prismDark.css"/>
     <title>Bastien Piguet</title>
     <link rel="icon" type="image/x-icon" href="asset/server-icon.png">
 
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script src="js/prism.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <!--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
 
 </head>
-
-<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
 
 <!-- Corps de la page -->
 
 <body>
-    <a class="link" href="index.html">Home</a>
-    <ul>
-        <li>1ère année</li>
-        <ul>
-            <li><a>Algèbre</a></li>
-            <li>Analyse</li>
-        </ul>
-        <li>2ème année</li>
-        <li>3ème année</li>
-    </ul>
-    <div class="block">
+    <div style="display: inline-block; vertical-align: top;">
+        <a class="link" href="index.html" style="margin: auto;">
+            <div class="inner">
+                Home
+            </div>
+        </a>
+        <div class="block">
+            <div class="inner" style="white-space: nowrap;">
+                <ul>
+                    <li>1ère année</li>
+                    <ul>
+                        <li><a>Algèbre</a></li>
+                        <li>Analyse</li>
+                    </ul>
+                    <li>2ème année</li>
+                    <li>3ème année</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="block" style="display: inline-block;">
         <div class="inner">
-            <md-block src="Cours/Semestre 3/Analyse 3/Analyse 3.md">
+            <!--Cours/Semestre 3/Analyse 3/Analyse 3.md-->
+            <md-block id="mdblock" src="Introduction à la programmation (Python).md" style="margin: auto">
                 # Oupsi
                 le document cherché n'a pas été trouvé
             </md-block>

@@ -6,24 +6,13 @@ body {
 
 h1 {
     font-size: 130%;
-    margin-bottom: 0em;
+    margin: auto;
 }
 
 h2 {
-    color: white;
     font-size: 50%;
     margin-left: 1em;
     margin-right: 1em;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 50%;
-    margin-left: -50%;
-    font-size: 40%;
-    background-color: rgb(20, 20, 20);
 }
 
 .inner{
@@ -32,7 +21,6 @@ footer {
 
 .info {
     border-color: rgb(80, 80, 80);
-    border-width: 1px;
     border-style: solid;
     border-radius: 0.5em;
     text-align: left;
@@ -59,11 +47,11 @@ footer {
 
 .serviceBlock {
     border-color: rgb(80, 80, 80);
-    border-width: 1px;
     border-style: solid;
     border-radius: 0.5em;
     width: auto;
     text-align: center;
+    margin: 0.1em
 }
  .serviceTitle {
     font-size: 40%;
@@ -76,4 +64,5 @@ footer {
  }
 
  .list{
+    margin:auto;
  }
