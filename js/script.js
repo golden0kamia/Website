@@ -11,20 +11,17 @@ function showOnly(n){
             webSlide.style.display = "";
             servSlide.style.display = "none";
             docSlide.style.display = "none";
-            webButton.style.color="rgb(20, 20, 20)";
-            webButton.style.backgroundColor="white";
-            servButton.style.color="white";
-            servButton.style.backgroundColor="rgb(20, 20, 20)";
+            webButton.className = "select";
+            servButton.className = "";
+            docButton.className = "";
             break;
         case 2:
             webSlide.style.display = "none";
             servSlide.style.display = "";
             docSlide.style.display = "none";
-            servButton.className = '.btn.actif';
-            servButton.style.color="rgb(20, 20, 20)";
-            servButton.style.backgroundColor="white";
-            webButton.style.color="white";
-            webButton.style.backgroundColor="rgb(20, 20, 20)";
+            webButton.className = "";
+            servButton.className = "select";
+            docButton.className = "";
 
             let myinfo = document.getElementById("heiaMotd");
             if(myinfo.innerText == "MOTD"){
@@ -75,6 +72,9 @@ function showOnly(n){
             webSlide.style.display = "none";
             servSlide.style.display = "none";
             docSlide.style.display = ""
+            webButton.className = "";
+            servButton.className = "";
+            docButton.className = "select";
             break;
         default:
             break;

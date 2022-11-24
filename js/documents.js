@@ -1,1 +1,1 @@
-let fs = document
+let fs = FileSystemDirectoryReader();
