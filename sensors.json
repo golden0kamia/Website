@@ -2,7 +2,7 @@
     "coretemp-isa-0000":{
        "Adapter": "ISA adapter",
        "Package id 0":{
-          "temp1_input": 52.000,
+          "temp1_input": 27.800,
           "temp1_max": 86.000,
           "temp1_crit": 92.000,
           "temp1_crit_alarm": 0.000

@@ -1,13 +1,16 @@
 
 function showOnly(n){
     const webSlide = document.getElementById("website");
-    const servSlide = document.getElementById("services");
     const webButton = document.getElementById("webButton");
+    const servSlide = document.getElementById("services");
     const servButton = document.getElementById("servButton");
+    const docSlide = document.getElementById("documents");
+    const docButton = document.getElementById("docButton");
     switch(n){
         case 1:
             webSlide.style.display = "";
             servSlide.style.display = "none";
+            docSlide.style.display = "none";
             webButton.style.color="rgb(20, 20, 20)";
             webButton.style.backgroundColor="white";
             servButton.style.color="white";
@@ -16,6 +19,7 @@ function showOnly(n){
         case 2:
             webSlide.style.display = "none";
             servSlide.style.display = "";
+            docSlide.style.display = "none";
             servButton.className = '.btn.actif';
             servButton.style.color="rgb(20, 20, 20)";
             servButton.style.backgroundColor="white";
@@ -66,6 +70,11 @@ function showOnly(n){
                 }
                 fillBar.style.width = tempPercent + '%';
             });
+            break;
+        case 3:
+            webSlide.style.display = "none";
+            servSlide.style.display = "none";
+            docSlide.style.display = ""
             break;
         default:
             break;
