@@ -9,3 +9,114 @@
 .inner{
     margin: 2%;
 }
+
+
+/* Remove default bullets */
+/* Remove margins and padding from the parent ul */
+#myUL {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+} 
+
+.mdfile{
+  color: cadetblue;
+  cursor: pointer;
+  user-select: none;
+}
+
+th{
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 2px;
+}
+
+td{
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-width: 1px;
+  padding: 0.5em;
+}
+
+table{
+  margin: auto;
+}
+
+h1{
+  color: rgb(0, 57, 121);
+}
+
+h2{
+  color: rgb(0, 83, 167);
+}
+
+h3{
+  color: rgb(0, 103, 184);
+}
+
+h4{
+  color: rgb(35, 131, 194);
+}
+
+h5{
+  color: rgb(79, 162, 223);
+}
+
+h6{
+  color: rgb(147, 185, 228);
+}
+
+@media (prefers-color-scheme: dark){
+  h1{
+    color: rgb(149, 192, 65);
+  }
+
+  h2{
+    color: rgb(69, 175, 82);
+  }
+ 
+  h3{
+    color: rgb(35, 186, 187);
+  }
+
+  h4{
+    color: rgb(111, 164, 227);
+  }
+
+  h5{
+    color: rgb(177, 154, 239);
+  }
+
+  h6{
+    color: rgb(236, 169, 245);
+  }
+}

@@ -67,6 +67,52 @@ function showOnly(n){
                 }
                 fillBar.style.width = tempPercent + '%';
             });
+            fetch("sensorsSpeed.json").then(res => {
+                //console.log(res.json());
+                return res.json();
+            }).then(json => {
+                let tempDisplay = document.getElementById("TempDisplaySpeed");
+                let fillBar = document.getElementById("fillBarSpeed1");
+                let fillBar1 = document.getElementById("fillBarSpeed2");
+                let coreTemp = json['coretemp-isa-0000']['Package id 0']['temp1_input'];
+                let coreTemp1 = json['coretemp-isa-0001']['Package id 1']['temp1_input'];
+                tempDisplay.innerHTML = coreTemp+"°C"+"\t/\t"+coreTemp1+"°C";
+                let tempPercent = ((coreTemp-20)*100)/70;
+                if(coreTemp < 20){
+                    tempPercent = 100-(coreTemp*100)/20;
+                    fillBar.style.backgroundColor = "aqua";
+                    fillBar.style.marginLeft = (100-tempPercent)+'%';
+                }
+                else if(coreTemp < 60){
+                    fillBar.style.backgroundColor = "green";
+                }
+                else if (coreTemp < 80){
+                    fillBar.style.backgroundColor = "orange";
+                }
+                else{
+                    fillBar.style.backgroundColor = "red";
+                }
+                fillBar.style.width = tempPercent + '%';
+
+                let tempPercent1 = ((coreTemp1-20)*100)/70;
+                if(coreTemp1 < 20){
+                    tempPercent1 = 100-(coreTemp1*100)/20;
+                    fillBar1.style.backgroundColor = "aqua";
+                    fillBar1.style.marginLeft = (100-tempPercent1)+'%';
+                }
+                else if(coreTemp1 < 60){
+                    fillBar1.style.backgroundColor = "green";
+                }
+                else if (coreTemp1 < 80){
+                    fillBar1.style.backgroundColor = "orange";
+                }
+                else{
+                    fillBar1.style.backgroundColor = "red";
+                }
+                fillBar1.style.width = tempPercent1 + '%';
+
+            });
+
             break;
         case 3:
             webSlide.style.display = "none";

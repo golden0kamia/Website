@@ -9,13 +9,27 @@
     <link rel="stylesheet" href="css/docStyle.css"/>
     <link rel="stylesheet" href="css/prismLight.css"/>
     <link rel="stylesheet" href="css/prismDark.css"/>
+
     <title>Bastien Piguet</title>
     <link rel="icon" type="image/x-icon" href="asset/server-icon.png">
 
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="js/prism.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <!--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="js/documents.js"></script>
+
+</script>
 
 </head>
 
@@ -23,33 +37,24 @@
 
 <body>
     <div style="display: inline-block; vertical-align: top;">
-        <a class="link" href="index.html" style="margin: auto;">
+        <a class="link" href="index.html" style="margin: 3px;">
             <div class="inner">
                 Home
             </div>
         </a>
-        <div class="block">
-            <div class="inner" style="white-space: nowrap;">
-                <ul>
-                    <li>1ère année</li>
-                    <ul>
-                        <li><a>Algèbre</a></li>
-                        <li>Analyse</li>
-                    </ul>
-                    <li>2ème année</li>
-                    <li>3ème année</li>
-                </ul>
+        <div class="block" style="margin: 3px">
+            <div class="inner" id="dirList" style="white-space: nowrap;">
+                Files tree
             </div>
         </div>
     </div>
 
-    <div class="block" style="display: inline-block;">
+    <div class="block" style="display: inline-block; margin: 3px">
         <div class="inner">
-            <!--Cours/Semestre 3/Analyse 3/Analyse 3.md-->
-            <md-block id="mdblock" src="Introduction à la programmation (Python).md" style="margin: auto">
-                # Oupsi
-                le document cherché n'a pas été trouvé
-            </md-block>
+            <div id="mdblock" src="Introduction à la programmation (Python).md" style="margin: auto">
+                Bienvenue dans mon répértoir de cours, naviguez seulement à la recherche de l'information voulu.
+            </div>
+            <script>setupFileTree();</script>
         </div>
     </div>
 </body>
