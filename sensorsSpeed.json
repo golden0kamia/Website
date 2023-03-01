@@ -1,0 +1,138 @@
+{
+   "tg3-pci-0301":{
+      "Adapter": "PCI adapter",
+      "temp1":{
+         "temp1_input": 29.000,
+         "temp1_max": 100.000,
+         "temp1_crit": 110.000
+      }
+   },
+   "tg3-pci-0303":{
+      "Adapter": "PCI adapter",
+      "temp1":{
+         "temp1_input": 29.000,
+         "temp1_max": 100.000,
+         "temp1_crit": 110.000
+      }
+   },
+   "coretemp-isa-0001":{
+      "Adapter": "ISA adapter",
+      "Package id 1":{
+         "temp1_input": 21.000,
+         "temp1_max": 81.000,
+         "temp1_crit": 91.000,
+         "temp1_crit_alarm": 0.000
+      },
+      "Core 0":{
+         "temp2_input": 8.000,
+         "temp2_max": 81.000,
+         "temp2_crit": 91.000,
+         "temp2_crit_alarm": 0.000
+      },
+      "Core 1":{
+         "temp3_input": 10.000,
+         "temp3_max": 81.000,
+         "temp3_crit": 91.000,
+         "temp3_crit_alarm": 0.000
+      },
+      "Core 2":{
+         "temp4_input": 21.000,
+         "temp4_max": 81.000,
+         "temp4_crit": 91.000,
+         "temp4_crit_alarm": 0.000
+      },
+      "Core 3":{
+         "temp5_input": 3.000,
+         "temp5_max": 81.000,
+         "temp5_crit": 91.000,
+         "temp5_crit_alarm": 0.000
+      },
+      "Core 4":{
+         "temp6_input": 11.000,
+         "temp6_max": 81.000,
+         "temp6_crit": 91.000,
+         "temp6_crit_alarm": 0.000
+      },
+      "Core 5":{
+         "temp7_input": 5.000,
+         "temp7_max": 81.000,
+         "temp7_crit": 91.000,
+         "temp7_crit_alarm": 0.000
+      }
+   },
+   "acpitz-acpi-0":{
+      "Adapter": "ACPI interface",
+      "temp1":{
+         "temp1_input": 8.300,
+         "temp1_crit": 31.300
+      }
+   },
+   "tg3-pci-0300":{
+      "Adapter": "PCI adapter",
+      "temp1":{
+         "temp1_input": 29.000,
+         "temp1_max": 100.000,
+         "temp1_crit": 110.000
+      }
+   },
+   "tg3-pci-0302":{
+      "Adapter": "PCI adapter",
+      "temp1":{
+         "temp1_input": 29.000,
+         "temp1_max": 100.000,
+         "temp1_crit": 110.000
+      }
+   },
+   "power_meter-acpi-0":{
+      "Adapter": "ACPI interface",
+      "power1":{
+         "power1_average": 92.000,
+         "power1_average_interval": 300.000
+      }
+   },
+   "coretemp-isa-0000":{
+      "Adapter": "ISA adapter",
+      "Package id 0":{
+         "temp1_input": 16.000,
+         "temp1_max": 81.000,
+         "temp1_crit": 91.000,
+         "temp1_crit_alarm": 0.000
+      },
+      "Core 0":{
+         "temp2_input": 12.000,
+         "temp2_max": 81.000,
+         "temp2_crit": 91.000,
+         "temp2_crit_alarm": 0.000
+      },
+      "Core 1":{
+         "temp3_input": 14.000,
+         "temp3_max": 81.000,
+         "temp3_crit": 91.000,
+         "temp3_crit_alarm": 0.000
+      },
+      "Core 2":{
+         "temp4_input": 15.000,
+         "temp4_max": 81.000,
+         "temp4_crit": 91.000,
+         "temp4_crit_alarm": 0.000
+      },
+      "Core 3":{
+         "temp5_input": 16.000,
+         "temp5_max": 81.000,
+         "temp5_crit": 91.000,
+         "temp5_crit_alarm": 0.000
+      },
+      "Core 4":{
+         "temp6_input": 10.000,
+         "temp6_max": 81.000,
+         "temp6_crit": 91.000,
+         "temp6_crit_alarm": 0.000
+      },
+      "Core 5":{
+         "temp7_input": 10.000,
+         "temp7_max": 81.000,
+         "temp7_crit": 91.000,
+         "temp7_crit_alarm": 0.000
+      }
+   }
+}

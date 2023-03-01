@@ -1,6 +1,7 @@
 @font-face {
     font-family: "RocknRollOne-Regular";
     src: url("../asset/RocknRollOne-Regular.ttf");
+    
 }
 
 html {
@@ -15,15 +16,9 @@ a {
     color: cadetblue;
 }
 
-img {
-    width: 0.9em;
-    height: 0.9em;
-    display: inline-block;
-}
-
 button{
     font-family: "RocknRollOne-Regular";
-    font-size: 50%;
+    #font-size: 50%;
     border-color: rgb(80, 80, 80);
     border-style: solid;
     border-radius: 0.5em;
@@ -54,6 +49,7 @@ button.select{
     transition: 0.4s;
     margin: 0.1em;
     display: block;
+    padding: 1%
 }
 .link:hover {
     background-color: rgb(210, 210, 210);
@@ -64,12 +60,12 @@ button.select{
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 50%;
-    margin-left: -50%;
-    font-size: 40%;
+    position: sticky;
+    #bottom: 0;
+    #width: 100%;
+    #left: 50%;
+    #margin-left: -50%;
+    #font-size: 40%;
     background-color: white;
 }
 

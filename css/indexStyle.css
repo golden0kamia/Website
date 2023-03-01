@@ -1,22 +1,28 @@
 
 body {
-    font-size: 6vmin;
+    font-size: 3vmin;
     text-align: center;
 }
 
 h1 {
-    font-size: 130%;
+    #font-size: 130%;
     margin: auto;
 }
 
 h2 {
-    font-size: 50%;
-    margin-left: 1em;
-    margin-right: 1em;
+    #font-size: 50%;
+    #margin-left: 1em;
+    #margin-right: 1em;
+}
+
+img {
+    width: 0.9em;
+    height: 0.9em;
+    display: inline-block;
 }
 
 .inner{
-    margin-left: 2%;
+    #margin-left: 2%;
 }
 
 .info {
@@ -33,11 +39,11 @@ h2 {
 }
 
 .infoTitle {
-    font-size: 40%;
+    #font-size: 40%;
 }
 
 .infoValue {
-    font-size: 60%;
+    #font-size: 60%;
 }
 
 .serviceIcon {
@@ -51,16 +57,17 @@ h2 {
     border-radius: 0.5em;
     width: auto;
     text-align: center;
-    margin: 0.1em
+    margin: 0.1em;
+    padding: 1%;
 }
  .serviceTitle {
-    font-size: 40%;
-    text-align: left;
+    #font-size: 40%;
+    #text-align: left;
  }
 
  .serviceInfo {
-    font-size: 80%;
-    margin-right: 0.3em;
+    #font-size: 80%;
+    #margin-right: 0.3em;
  }
 
  .list{

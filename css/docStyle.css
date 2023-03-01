@@ -1,13 +1,20 @@
+img{
+  marign: auto;
+  max-width: 100%;
+}
+
 .block {
     border-color: rgb(80, 80, 80);
     border-style: solid;
     border-radius: 0.5em;
     margin: 0.1em;
     max-width: 30cm;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
-.inner{
-    margin: 2%;
+.link{
+    padding-left: 1em    
 }
 
 
@@ -95,6 +102,14 @@ h6{
   color: rgb(147, 185, 228);
 }
 
+em{
+  color: rgb(96, 159, 78);
+}
+
+em > strong{
+  color: rgb(19, 154, 255);
+}
+
 @media (prefers-color-scheme: dark){
   h1{
     color: rgb(149, 192, 65);
@@ -118,5 +133,9 @@ h6{
 
   h6{
     color: rgb(236, 169, 245);
+  }
+  
+  em{
+    color: rgb(164, 202, 142);
   }
 }

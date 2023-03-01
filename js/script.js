@@ -22,26 +22,54 @@ function showOnly(n){
             webButton.className = "";
             servButton.className = "select";
             docButton.className = "";
+            break;
+        case 3:
+            webSlide.style.display = "none";
+            servSlide.style.display = "none";
+            docSlide.style.display = ""
+            webButton.className = "";
+            servButton.className = "";
+            docButton.className = "select";
+            break;
+        default:
+            break;
+    }
+}
 
-            let myinfo = document.getElementById("heiaMotd");
-            if(myinfo.innerText == "MOTD"){
-                myinfo.innerText = "Loading";
-                fetch("https://api.mcsrvstat.us/2/heia.mc.piguetb.ch").then(res => {
-                    //console.log(res.json());
-                    return res.json();
-                }).then(json =>{
-                    let myinfo = document.getElementById("heiaPlayer");
-                    let mytext = document.getElementById("heiaMotd");
-                    let myIcon = document.getElementById("heiaIcon");
-                    myIcon.src = json.icon;
-                    mytext.innerHTML = json.motd.html;
-                    //console.log(json.motd)
-                    myinfo.innerText = json.players.online + "/" + json.players.max;
-                    //console.log(json.players.list);
-                    myinfo.title = json.players.list;
-                });
-            }
+function showMore(){
+    let button = document.getElementById("hiddenButton");
+    let moreLink = document.getElementById("privateLink");
+    if(moreLink.style.display == "none"){
+        moreLink.style.display = "block";
+        button.textContent="Less";
+    }
+    else{
+        moreLink.style.display = "none";
+        button.textContent="More";
+    }
+}
 
+async function loadMC(){
+    fetch("https://api.mcsrvstat.us/2/heia.mc.piguetb.ch").then(res => {
+      //console.log(res.json());
+      return res.json();
+    }).then(json =>{
+      if(json.online){
+        document.getElementById("heiaBlock").style.display = "";
+        let myinfo = document.getElementById("heiaPlayer");
+        document.getElementById("heiaMotd").innerHTML = json.motd.html;
+        document.getElementById("heiaIcon").src = json.icon;
+        //myIcon.src = json.icon;
+        //mytext.innerHTML = json.motd.html;
+        //console.log(json.motd)
+        myinfo.innerText = json.players.online + "/" + json.players.max;
+        //console.log(json.players.list);
+        myinfo.title = json.players.list;
+      }
+    });
+}
+
+async function loadTemp(){
             fetch("sensors.json").then(res => {
                 //console.log(res.json());
                 return res.json();
@@ -71,6 +99,8 @@ function showOnly(n){
                 //console.log(res.json());
                 return res.json();
             }).then(json => {
+                console.log(json);
+                document.getElementById("speedBlock").style.display = "";
                 let tempDisplay = document.getElementById("TempDisplaySpeed");
                 let fillBar = document.getElementById("fillBarSpeed1");
                 let fillBar1 = document.getElementById("fillBarSpeed2");
@@ -112,31 +142,4 @@ function showOnly(n){
                 fillBar1.style.width = tempPercent1 + '%';
 
             });
-
-            break;
-        case 3:
-            webSlide.style.display = "none";
-            servSlide.style.display = "none";
-            docSlide.style.display = ""
-            webButton.className = "";
-            servButton.className = "";
-            docButton.className = "select";
-            break;
-        default:
-            break;
-    }
 }
-
-function showMore(){
-    let button = document.getElementById("hiddenButton");
-    let moreLink = document.getElementById("privateLink");
-    if(moreLink.style.display == "none"){
-        moreLink.style.display = "block";
-        button.textContent="Less";
-    }
-    else{
-        moreLink.style.display = "none";
-        button.textContent="More";
-    }
-}
-  
